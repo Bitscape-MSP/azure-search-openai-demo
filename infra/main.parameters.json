@@ -51,7 +51,7 @@
       "value": "${AZURE_STORAGE_RESOURCE_GROUP}"
     },
     "chatGptDeploymentName": {
-      "value": "${AZURE_OPENAI_CHATGPT_DEPLOYMENT=chat}"
+      "value": "${AZURE_OPENAI_CHATGPT_DEPLOYMENT=GPT}"
     },
     "useApplicationInsights": {
       "value": "${AZURE_USE_APPLICATION_INSIGHTS=false}"

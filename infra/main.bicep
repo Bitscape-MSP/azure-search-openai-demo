@@ -9,26 +9,26 @@ param environmentName string
 @description('Primary location for all resources')
 param location string
 
-param appServicePlanName string = ''
-param backendServiceName string = ''
-param resourceGroupName string = ''
+param appServicePlanName string = 'asp-gpt-vectorsearch-uat-eus-01'
+param backendServiceName string = 'app-gpt-vectorsearch-uat-eus-01'
+param resourceGroupName string = 'rg-gpt-vectorsearch-uat-eus'
 
-param applicationInsightsName string = ''
+param applicationInsightsName string = 'appinsight-gpt-vectorsearch-uat-eus-01'
 
-param searchServiceName string = ''
-param searchServiceResourceGroupName string = ''
+param searchServiceName string = 'aoai-cognitive-search-uat-eus-01'
+param searchServiceResourceGroupName string = 'rg-gpt-vectorsearch-uat-eus'
 param searchServiceResourceGroupLocation string = location
 
 param searchServiceSkuName string = 'standard'
 param searchIndexName string // Set in main.parameters.json
 
-param storageAccountName string = ''
-param storageResourceGroupName string = ''
+param storageAccountName string = 'sagptkbuateus01'
+param storageResourceGroupName string = 'rg-gpt-vectorsearch-uat-eus'
 param storageResourceGroupLocation string = location
-param storageContainerName string = 'content'
+param storageContainerName string = 'employeebenefits'
 
-param openAiServiceName string = ''
-param openAiResourceGroupName string = ''
+param openAiServiceName string = 'openai-bicore-prd-eus-01'
+param openAiResourceGroupName string = 'rg-openai-prd-eus'
 @description('Location for the OpenAI resource group')
 @allowed(['canadaeast', 'eastus', 'francecentral', 'japaneast', 'northcentralus'])
 @metadata({
@@ -40,8 +40,8 @@ param openAiResourceGroupLocation string
 
 param openAiSkuName string = 'S0'
 
-param formRecognizerServiceName string = ''
-param formRecognizerResourceGroupName string = ''
+param formRecognizerServiceName string = 'aoai-document-intel-uat-eus-01'
+param formRecognizerResourceGroupName string = 'rg-gpt-vectorsearch-uat-eus'
 param formRecognizerResourceGroupLocation string = location
 
 param formRecognizerSkuName string = 'S0'
@@ -58,7 +58,7 @@ param embeddingModelName string = 'text-embedding-ada-002'
 param principalId string = ''
 
 @description('Use Application Insights for monitoring and performance tracing')
-param useApplicationInsights bool = false
+param useApplicationInsights bool = true
 
 var abbrs = loadJsonContent('abbreviations.json')
 var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))

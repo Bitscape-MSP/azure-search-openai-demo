@@ -10,7 +10,7 @@ param environmentName string
 param location string
 
 param appServicePlanName string = 'asp-gpt-vectorsearch-uat-eus-01'
-param backendServiceName string = 'app-gpt-vectorsearch-uat-eus-01'
+param backendServiceName string = 'app-gpt-vectorsearch-uat-eus'
 param resourceGroupName string = 'rg-gpt-vectorsearch-uat-eus'
 
 param applicationInsightsName string = 'appinsight-gpt-vectorsearch-uat-eus-01'
